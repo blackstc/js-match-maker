@@ -55,3 +55,17 @@ alert("The total number of mentors with javascript are " + mentorArr.length);
 for (var i = 0; i < mentorArr.length; i++) {
   alert("Name: " + mentorArr[i].name + "\nPhone Number: " + mentorArr[i].phoneNumber + "\nCity: " + mentorArr[i].city);
 };
+
+var mentorCity = prompt("Please name a city.");
+var cityArr = [];
+
+for (var i = 0; i < mentorArr.length; i++) {
+  if (mentorCity.toUpperCase() === mentorArr[i].city.toUpperCase()) {
+    cityArr.push(mentorArr[i]);
+  }
+  console.log(cityArr);
+}
+
+for (var i = 0; i < cityArr.length; i++) {
+  alert(cityArr[i].name + " is from " + mentorCity);
+}
