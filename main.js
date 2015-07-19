@@ -52,10 +52,6 @@ for (var i = 0; i < studentArr.length; i++) {
 
 alert("The total number of mentors with javascript are " + mentorArr.length);
 
-for (var i = 0; i < mentorArr.length; i++) {
-  alert("Name: " + mentorArr[i].name + "\nPhone Number: " + mentorArr[i].phoneNumber + "\nCity: " + mentorArr[i].city);
-};
-
 var mentorCity = prompt("Please name a city.");
 var cityArr = [];
 
