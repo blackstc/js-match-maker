@@ -6,7 +6,7 @@ for (var i = 0; i < studentArr.length; i++) {
   var textNode = document.createTextNode("Name: " + studentArr[i].name + ",  Phone Number: " + studentArr[i].phoneNumber + ",  City: " + studentArr[i].city);
   node.appendChild(textNode);
   studentEl.appendChild(node);
-}
+};
 
 for (var i = 0; i < mentorArr.length; i++) {
   var node = document.createElement("LI");
