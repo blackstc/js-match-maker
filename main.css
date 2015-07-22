@@ -1,0 +1,43 @@
+span{
+  display: inline-block;
+  line-height: 2.25;
+  width: 100px;
+}
+
+input[type=text] {
+  font-size: 20px;
+  width: 400px;
+}
+
+input[type=checkbox] {
+  margin: 5px 25px 5px 25px;
+}
+
+form {
+  color:blue;
+  font-size: 25px;
+}
+
+button {
+  background-color: lime;
+  position: relative;
+  left: 150px;
+  top: 5px;
+  font-size: 20px;
+}
+
+.answerS{
+  position: relative;
+  float: left;
+  color: blue;
+  font-size: 25px;
+  width: 45%;
+}
+
+.answerM {
+  position: relative;
+  float: left;
+  color: blue;
+  font-size: 25px;
+
+}

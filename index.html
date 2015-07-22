@@ -3,12 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body>
-    <ul id="students">Students
+    <form id="contact">
+      <span>Name:</span><input type="text" id="name"><br>
+      <span>Phone:</span><input type="text" id="phoneNumber"><br>
+      <span>City:</span><input type="text" id="city"><br>
+      <input type="checkbox" id="studentCheckbox">Student<br>
+      <input type="checkbox" id="mentorCheckbox">Mentor<br>
+      <button type="button" id="subBtn">Submit</button>
+    </form>
+    <ul class="answerS" id="students">Students
 
     </ul>
-    <ul id="mentors">Mentors
+    <ul class="answerM" id="mentors">Mentors
 
     </ul>
     <script type="text/javascript" src="main.js"></script>

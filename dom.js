@@ -1,16 +1,34 @@
 var studentEl = document.getElementById('students');
 var mentorEl = document.getElementById('mentors');
 
-for (var i = 0; i < studentArr.length; i++) {
-  var node = document.createElement("LI");
-  var textNode = document.createTextNode("Name: " + studentArr[i].name + ",  Phone Number: " + studentArr[i].phoneNumber + ",  City: " + studentArr[i].city);
-  node.appendChild(textNode);
-  studentEl.appendChild(node);
-};
+function printStudent () {
+    var node = document.createElement("LI");
+    var textNode = document.createTextNode("Name: " + contactInfo.name + ",  Phone Number: " + contactInfo.phoneNumber + ",  City: " + contactInfo.city);
+    node.appendChild(textNode);
+    studentEl.appendChild(node);
+}
 
-for (var i = 0; i < mentorArr.length; i++) {
+function printMentor () {
   var node = document.createElement("LI");
-  var textNode = document.createTextNode("Name: " + mentorArr[i].name + ",  Phone Number: " + mentorArr[i].phoneNumber + ",  City: " + mentorArr[i].city);
+  var textNode = document.createTextNode("Name: " + contactInfo.name + ",  Phone Number: " + contactInfo.phoneNumber + ",  City: " + contactInfo.city);
   node.appendChild(textNode);
   mentorEl.appendChild(node);
+
 }
+
+var submitButton = document.getElementById('subBtn');
+var studentCheckbox = document.getElementById('studentCheckbox');
+var mentorCheckbox =  document.getElementById('mentorCheckbox');
+var form = document.getElementById('contact');
+
+submitButton.addEventListener("click", function() {
+  if (studentCheckbox.checked === true) {
+    students();
+  } else if(mentorCheckbox.checked === true){
+    mentors();
+  }
+  form.reset();
+});
+
+
+

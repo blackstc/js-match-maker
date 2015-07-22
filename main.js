@@ -1,67 +1,51 @@
-console.log("sanity check");
-
-var studentArr = [];
+var contactInfo = {name: "", phoneNumber: "", city: ""};
 
 function students() {
-  var contactInfo = {name: "", phoneNumber: "", city: ""};
-  var studentName = prompt("What is the student's full name?");
-  var studentPhone = prompt("What is the student's phone number?", "XXX-XXX-XXXX");
-  var studentCity = prompt("What city is the student from?");
+
+  var studentName = document.getElementById('name').value;
+  var studentPhone = document.getElementById('phoneNumber').value;
+  var studentCity = document.getElementById('city').value;
 
   contactInfo.name = studentName;
   contactInfo.phoneNumber = studentPhone;
   contactInfo.city = studentCity;
-  studentArr.push(contactInfo);
 
-  var anotherStudent = prompt("Would you like to add another student?", "yes or no");
-
-  if (anotherStudent.toUpperCase() === "YES") {
-    students();
-  }
+  printStudent();
 }
 
-students();
 
-var mentorArr = [];
 
 function mentors() {
-  var contactInfo = {name: "", phoneNumber: "", city: ""};
-  var mentorName = prompt("What is the mentor's full name?");
-  var mentorPhone = prompt("What is the mentor's phone number?", "XXX-XXX-XXXX");
-  var mentorCity = prompt("What city is the mentor from?");
+  var mentorName = document.getElementById('name').value;
+  var mentorPhone = document.getElementById('phoneNumber').value;
+  var mentorCity = document.getElementById('city').value;
 
   contactInfo.name = mentorName;
   contactInfo.phoneNumber = mentorPhone;
   contactInfo.city = mentorCity;
-  mentorArr.push(contactInfo);
 
-  var anotherMentor = prompt("Would you like to add another mentor?", "yes or no");
-
-  if (anotherMentor.toUpperCase() === "YES") {
-    mentors();
-  }
+    printMentor();
 }
 
-mentors();
+//Code below was used in previous iteration of the problem for using prompts and alerts.
+// alert("The total number of students learning javascript are " + studentArr.length);
 
-alert("The total number of students learning javascript are " + studentArr.length);
+// for (var i = 0; i < studentArr.length; i++) {
+//   alert("Name: " + studentArr[i].name + "\nPhone Number: " + studentArr[i].phoneNumber + "\nCity: " + studentArr[i].city);
+// };
 
-for (var i = 0; i < studentArr.length; i++) {
-  alert("Name: " + studentArr[i].name + "\nPhone Number: " + studentArr[i].phoneNumber + "\nCity: " + studentArr[i].city);
-};
+// alert("The total number of mentors with javascript are " + mentorArr.length);
 
-alert("The total number of mentors with javascript are " + mentorArr.length);
+// var mentorCity = prompt("Please name a city.");
+// var cityArr = [];
 
-var mentorCity = prompt("Please name a city.");
-var cityArr = [];
+// for (var i = 0; i < mentorArr.length; i++) {
+//   if (mentorCity.toUpperCase() === mentorArr[i].city.toUpperCase()) {
+//     cityArr.push(mentorArr[i]);
+//   }
+//   console.log(cityArr);
+// }
 
-for (var i = 0; i < mentorArr.length; i++) {
-  if (mentorCity.toUpperCase() === mentorArr[i].city.toUpperCase()) {
-    cityArr.push(mentorArr[i]);
-  }
-  console.log(cityArr);
-}
-
-for (var i = 0; i < cityArr.length; i++) {
-  alert(cityArr[i].name + " is from " + mentorCity);
-}
+// for (var i = 0; i < cityArr.length; i++) {
+//   alert(cityArr[i].name + " is from " + mentorCity);
+// }
